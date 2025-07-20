@@ -1,0 +1,62 @@
+# Vishal Edits - Video Editor Portfolio
+
+## Project Overview
+A professional video editor's portfolio website showcasing services, portfolio work, testimonials, and contact information. The site features a modern dark theme with blue accents and smooth animations.
+
+## Project Architecture
+- **Frontend**: React 18 with TypeScript
+- **Routing**: Wouter for client-side routing
+- **Styling**: Tailwind CSS with shadcn/ui components
+- **State Management**: React Query for server state, React hooks for local state
+- **Build Tool**: Vite with Express server integration
+- **Backend**: Express.js server with full-stack architecture support
+
+## Recent Changes
+- **2025-01-20**: Migrated from Bolt to Replit environment
+  - Updated App.tsx to use wouter routing and React Query
+  - Created proper page structure with HomePage component
+  - Added shadcn/ui component system with toast notifications
+  - Removed explicit React imports following Replit best practices
+  - Fixed TypeScript imports in Contact component
+  - Added CSS variables for shadcn theming
+  - Ensured proper client/server separation
+
+## Key Features
+- Responsive portfolio website for video editing services
+- Interactive sections: Hero, About, Portfolio, Services, Testimonials, Contact
+- Modern UI with backdrop blur effects and smooth scrolling
+- Contact form with state management
+- Social media integration
+
+## Technical Stack
+- **Framework**: React 18 + TypeScript + Vite
+- **Styling**: Tailwind CSS + shadcn/ui
+- **Routing**: Wouter
+- **Data Fetching**: TanStack React Query
+- **Icons**: Lucide React
+- **Server**: Express.js with development/production modes
+
+## File Structure
+```
+client/
+├── src/
+│   ├── components/       # React components
+│   ├── pages/           # Page components
+│   ├── lib/             # Utility functions
+│   ├── hooks/           # Custom hooks
+│   └── ui/              # shadcn/ui components
+server/                  # Express backend
+shared/                  # Shared types/schemas
+```
+
+## User Preferences
+- Clean, professional codebase
+- Modern React patterns without explicit React imports
+- Component-based architecture
+- Responsive design with mobile-first approach
+
+## Development Notes
+- Server runs on port 5000 (Replit standard)
+- Hot reload enabled for development
+- TypeScript strict mode enabled
+- CSS custom properties for theming

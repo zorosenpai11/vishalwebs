@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState, FormEvent, ChangeEvent } from 'react';
 import { Mail, Instagram, Youtube, MessageCircle, Send, MapPin, Clock } from 'lucide-react';
 
 const Contact = () => {
@@ -8,7 +8,7 @@ const Contact = () => {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     // Handle form submission here
     console.log('Form submitted:', formData);
@@ -16,7 +16,7 @@ const Contact = () => {
     setFormData({ name: '', email: '', message: '' });
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value

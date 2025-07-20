@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Play, Filter } from 'lucide-react';
 
 const Portfolio = () => {

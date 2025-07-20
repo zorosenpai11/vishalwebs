@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Video, Youtube, Megaphone, Mic, ArrowRight } from 'lucide-react';
 
 const Services = () => {

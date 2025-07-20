@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { User, Award, Zap } from 'lucide-react';
 
 const About = () => {
