@@ -35,24 +35,24 @@ const Hero = () => {
 
       <div className="relative z-30 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
         {/* Main Title */}
-        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight float-animation">
+        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight float-animation animate-on-load animate-fade-in-scale">
           <span className="cyber-gradient-text">
             Vishal Edits
           </span>
         </h1>
 
         {/* Subtitle */}
-        <p className="text-xl sm:text-2xl text-cyan-300 mb-4 font-medium">
+        <p className="text-xl sm:text-2xl text-cyan-300 mb-4 font-medium animate-on-load animate-fade-in-up animate-delay-200">
           🎬 Video Editor | Short & Long Form Specialist
         </p>
 
         {/* Tagline */}
-        <p className="text-lg sm:text-xl text-white/70 mb-12 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-lg sm:text-xl text-white/70 mb-12 max-w-2xl mx-auto leading-relaxed animate-on-load animate-fade-in-up animate-delay-400">
           Crafting Visual Stories That Convert
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-on-load animate-fade-in-up animate-delay-600">
           <a 
             href="https://instagram.com/vishaledits25" 
             target="_blank" 

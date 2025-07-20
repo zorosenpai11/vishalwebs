@@ -26,7 +26,7 @@ const Header = () => {
       isScrolled 
         ? 'bg-black/20 backdrop-blur-xl border border-white/10' 
         : 'bg-black/10 backdrop-blur-md border border-white/5'
-    } rounded-full`}>
+    } rounded-full animate-on-load animate-fade-in-scale animate-delay-200`}>
       <div className="px-4 md:px-6 py-2">
         <div className="flex items-center justify-between h-12">
           <div className="text-xl text-white font-extrabold mr-8 cursor-pointer transition-all duration-300 hover:scale-110 hover:text-cyan-400 hover:drop-shadow-[0_0_10px_rgba(0,255,255,0.5)] active:scale-95">
@@ -34,12 +34,12 @@ const Header = () => {
           </div>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-6">
+          <nav className="hidden md:flex space-x-2">
             {['Home', 'About', 'Services', 'Contact'].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
-                className="text-white/80 hover:text-white transition-all duration-300 text-sm font-medium px-3 py-2 rounded-full hover:bg-white/10 hover:shadow-lg hover:shadow-cyan-400/20 hover:scale-105 active:scale-95"
+                className="text-white/80 hover:text-white transition-all duration-300 text-sm font-medium px-3 py-2 rounded-full hover:bg-white/10 hover:shadow-lg hover:shadow-cyan-400/20 hover:scale-105 active:scale-95 whitespace-nowrap"
               >
                 {item}
               </button>
