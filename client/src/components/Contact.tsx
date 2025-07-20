@@ -1,7 +1,10 @@
 import { useState, FormEvent, ChangeEvent } from 'react';
-import { Mail, Instagram, Youtube, MessageCircle, Send, MapPin, Clock } from 'lucide-react';
+import { Instagram, Youtube, Send, MapPin, Clock } from 'lucide-react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Contact = () => {
+  const { ref, isVisible } = useScrollAnimation();
+  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -27,7 +30,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto" ref={ref}>
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
             Let's <span className="text-blue-400">Connect</span>
@@ -38,9 +41,9 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className={`grid lg:grid-cols-2 gap-8 lg:gap-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           {/* Contact Form */}
-          <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8">
+          <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 md:p-8 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:border-white/20">
             <h3 className="text-2xl font-semibold text-white mb-6">Send Me a Message</h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -105,7 +108,7 @@ const Contact = () => {
           {/* Contact Info */}
           <div className="space-y-8">
             {/* Quick Info */}
-            <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8">
+            <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 md:p-8 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:border-white/20">
               <h3 className="text-2xl font-semibold text-white mb-6">Get In Touch</h3>
               
               <div className="space-y-6">
@@ -132,7 +135,7 @@ const Contact = () => {
             </div>
 
             {/* Social Links */}
-            <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8">
+            <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 md:p-8 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:border-white/20">
               <h3 className="text-2xl font-semibold text-white mb-6">Follow My Work</h3>
               
               <div className="space-y-4">
@@ -140,7 +143,7 @@ const Contact = () => {
                   href="https://instagram.com/vishaledits25"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300 group"
+                  className="flex items-center gap-4 p-4 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 hover:shadow-2xl hover:shadow-pink-500/20 transition-all duration-300 group hover:border-pink-500/30"
                 >
                   <div className="w-12 h-12 bg-pink-500/20 rounded-2xl flex items-center justify-center">
                     <Instagram className="text-pink-400" size={20} />
@@ -148,6 +151,22 @@ const Contact = () => {
                   <div className="flex-1">
                     <h4 className="text-white font-medium">Instagram</h4>
                     <p className="text-white/70 text-sm">@vishaledits25</p>
+                  </div>
+                  <div className="text-white/50 group-hover:text-white transition-colors">→</div>
+                </a>
+
+                <a
+                  href="https://youtube.com/@vishaleditss25"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 p-4 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 hover:shadow-2xl hover:shadow-red-500/20 transition-all duration-300 group hover:border-red-500/30"
+                >
+                  <div className="w-12 h-12 bg-red-500/20 rounded-2xl flex items-center justify-center">
+                    <Youtube className="text-red-400" size={20} />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="text-white font-medium">YouTube</h4>
+                    <p className="text-white/70 text-sm">@vishaleditss25</p>
                   </div>
                   <div className="text-white/50 group-hover:text-white transition-colors">→</div>
                 </a>

@@ -31,6 +31,15 @@ A professional video editor's portfolio website showcasing services, portfolio w
   - Updated About section with round profile photo and hover effects
   - Replaced DaVinci with CapCut in tools list
 
+- **2025-01-20**: Enhanced Mobile Responsiveness and Animations
+  - Streamlined navbar by removing "Edits", "Testimonials", and "Works" links
+  - Positioned Specialties section beside Tools in About section
+  - Added scroll fade-in animations to all major sections
+  - Implemented hover glow effects on all cards and interactive elements
+  - Added YouTube back to "Follow My Work" section alongside Instagram
+  - Enhanced mobile responsiveness across all components
+  - Improved Dynamic Island navbar positioning for mobile devices
+
 ## Key Features
 - Responsive portfolio website for video editing services
 - Interactive sections: Hero, About, Portfolio, Services, Testimonials, Contact
