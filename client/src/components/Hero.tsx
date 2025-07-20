@@ -40,10 +40,15 @@ const Hero = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button className="group bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:bg-white/20 hover:scale-105 flex items-center gap-3">
+          <a 
+            href="https://instagram.com/vishaledits25" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="group bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:bg-white/20 hover:scale-105 flex items-center gap-3"
+          >
             <Play size={20} className="group-hover:scale-110 transition-transform" />
-            Watch Showreel
-          </button>
+            Watch Reel
+          </a>
           
           <button 
             onClick={scrollToContact}

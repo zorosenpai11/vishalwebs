@@ -20,6 +20,16 @@ A professional video editor's portfolio website showcasing services, portfolio w
   - Fixed TypeScript imports in Contact component
   - Added CSS variables for shadcn theming
   - Ensured proper client/server separation
+  
+- **2025-01-20**: Instagram Integration and UI Updates
+  - Transformed "Portfolio" section to "My Works" with reel-type videos
+  - Added Dynamic Island-style navbar with round corners
+  - Integrated Instagram links throughout the entire website
+  - Updated Contact form to redirect to Instagram DMs with pre-filled info
+  - Streamlined social media presence to focus on Instagram only
+  - Removed email and WhatsApp from all social sections
+  - Updated About section with round profile photo and hover effects
+  - Replaced DaVinci with CapCut in tools list
 
 ## Key Features
 - Responsive portfolio website for video editing services

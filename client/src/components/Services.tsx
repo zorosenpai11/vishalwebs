@@ -97,10 +97,15 @@ const Services = () => {
           <p className="text-white/70 mb-6 max-w-2xl mx-auto">
             Every project is unique. Let's discuss your specific needs and create a tailored solution that brings your vision to life.
           </p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:scale-105 flex items-center gap-3 mx-auto">
+          <a 
+            href="https://instagram.com/vishaledits25" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:scale-105 flex items-center gap-3 mx-auto"
+          >
             <Megaphone size={20} />
             DM for Custom Projects
-          </button>
+          </a>
         </div>
       </div>
     </section>

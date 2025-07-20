@@ -1,5 +1,5 @@
 
-import { Heart, Instagram, Youtube, Mail } from 'lucide-react';
+import { Heart, Instagram, Youtube } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -18,11 +18,11 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-white font-semibold">Quick Links</h4>
             <div className="space-y-2">
-              {['About', 'Portfolio', 'Services', 'Contact'].map((link) => (
+              {['About', 'Works', 'Services', 'Contact'].map((link) => (
                 <button
                   key={link}
                   onClick={() => {
-                    const element = document.getElementById(link.toLowerCase());
+                    const element = document.getElementById(link.toLowerCase() === 'works' ? 'portfolio' : link.toLowerCase());
                     if (element) {
                       element.scrollIntoView({ behavior: 'smooth' });
                     }
@@ -54,12 +54,6 @@ const Footer = () => {
                 className="w-10 h-10 bg-white/10 rounded-2xl flex items-center justify-center hover:bg-red-500/20 transition-colors"
               >
                 <Youtube className="text-red-400" size={18} />
-              </a>
-              <a
-                href="mailto:vishaledits@example.com"
-                className="w-10 h-10 bg-white/10 rounded-2xl flex items-center justify-center hover:bg-blue-500/20 transition-colors"
-              >
-                <Mail className="text-blue-400" size={18} />
               </a>
             </div>
           </div>

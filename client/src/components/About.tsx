@@ -5,7 +5,7 @@ const About = () => {
   const tools = [
     'Premiere Pro',
     'After Effects', 
-    'DaVinci Resolve'
+    'CapCut'
   ];
 
   return (
@@ -19,6 +19,20 @@ const About = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Profile Photo Section */}
+          <div className="flex justify-center lg:justify-start">
+            <div className="relative group">
+              <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-blue-500/30 transition-all duration-300 group-hover:border-blue-400/60 group-hover:scale-105">
+                <img 
+                  src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                  alt="Vishal - Video Editor"
+                  className="w-full h-full object-cover transition-all duration-300 group-hover:scale-110"
+                />
+              </div>
+              <div className="absolute inset-0 rounded-full bg-gradient-to-t from-blue-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+          </div>
+
           {/* Bio Section */}
           <div className="space-y-8">
             <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8">

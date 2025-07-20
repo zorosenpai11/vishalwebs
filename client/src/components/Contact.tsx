@@ -10,8 +10,10 @@ const Contact = () => {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
+    // Redirect to Instagram DM with pre-filled info
+    const message = `Hi! I'm ${formData.name} (${formData.email}). ${formData.message}`;
+    const instagramUrl = `https://instagram.com/direct/new/`;
+    window.open(instagramUrl, '_blank');
     // Reset form
     setFormData({ name: '', email: '', message: '' });
   };
@@ -146,52 +148,6 @@ const Contact = () => {
                   <div className="flex-1">
                     <h4 className="text-white font-medium">Instagram</h4>
                     <p className="text-white/70 text-sm">@vishaledits25</p>
-                  </div>
-                  <div className="text-white/50 group-hover:text-white transition-colors">→</div>
-                </a>
-
-                <a
-                  href="https://youtube.com/@vishaleditss25"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300 group"
-                >
-                  <div className="w-12 h-12 bg-red-500/20 rounded-2xl flex items-center justify-center">
-                    <Youtube className="text-red-400" size={20} />
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="text-white font-medium">YouTube</h4>
-                    <p className="text-white/70 text-sm">@vishaleditss25</p>
-                  </div>
-                  <div className="text-white/50 group-hover:text-white transition-colors">→</div>
-                </a>
-
-                <a
-                  href="mailto:vishaledits@example.com"
-                  className="flex items-center gap-4 p-4 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300 group"
-                >
-                  <div className="w-12 h-12 bg-blue-500/20 rounded-2xl flex items-center justify-center">
-                    <Mail className="text-blue-400" size={20} />
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="text-white font-medium">Email</h4>
-                    <p className="text-white/70 text-sm">vishaledits@example.com</p>
-                  </div>
-                  <div className="text-white/50 group-hover:text-white transition-colors">→</div>
-                </a>
-
-                <a
-                  href="https://wa.me/1234567890"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300 group"
-                >
-                  <div className="w-12 h-12 bg-green-500/20 rounded-2xl flex items-center justify-center">
-                    <MessageCircle className="text-green-400" size={20} />
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="text-white font-medium">WhatsApp</h4>
-                    <p className="text-white/70 text-sm">Quick chat</p>
                   </div>
                   <div className="text-white/50 group-hover:text-white transition-colors">→</div>
                 </a>
