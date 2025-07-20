@@ -22,19 +22,19 @@ const Header = () => {
   };
 
   return (
-    <header className={`fixed top-2 md:top-4 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 w-auto max-w-sm md:max-w-lg mx-4 ${
+    <header className={`fixed top-2 md:top-4 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 w-auto max-w-xs md:max-w-2xl mx-4 ${
       isScrolled 
         ? 'bg-black/20 backdrop-blur-xl border border-white/10' 
         : 'bg-black/10 backdrop-blur-md border border-white/5'
-    } rounded-full animate-on-load animate-fade-in-scale animate-delay-200`}>
-      <div className="px-4 md:px-6 py-2">
-        <div className="flex items-center justify-between h-12">
-          <div className="text-xl text-white font-extrabold mr-4 cursor-pointer transition-all duration-300 hover:scale-110 hover:text-purple-400 hover:drop-shadow-[0_0_10px_rgba(168,85,247,0.5)] active:scale-95" style={{ fontFamily: 'Orbitron, Inter, sans-serif' }}>
+    } rounded-full animate-on-load animate-smoke-fade animate-delay-400`}>
+      <div className="px-4 md:px-8 py-2">
+        <div className="flex items-center justify-center md:justify-between h-12 gap-4">
+          <div className="hidden md:block text-xl text-white font-extrabold cursor-pointer transition-all duration-300 hover:scale-110 hover:text-purple-400 hover:drop-shadow-[0_0_10px_rgba(168,85,247,0.5)] active:scale-95" style={{ fontFamily: 'Orbitron, Inter, sans-serif' }}>
             Vishal
           </div>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-2">
+          <nav className="flex space-x-2">
             {['Home', 'About', 'Services', 'Contact'].map((item) => (
               <button
                 key={item}
@@ -49,7 +49,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-white p-2"
+            className="md:hidden text-white p-2 absolute right-4"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
