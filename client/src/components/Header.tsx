@@ -22,7 +22,7 @@ const Header = () => {
   };
 
   return (
-    <header className={`fixed top-2 md:top-4 left-1/2 transform -translate-x-[60%] z-50 transition-all duration-500 w-fit ${
+    <header className={`fixed top-2 md:top-4 left-1/2 transform -translate-x-[70%] z-50 transition-all duration-500 w-fit ${
       isScrolled 
         ? 'bg-black/30 backdrop-blur-xl border border-white/20 shadow-2xl shadow-purple-500/10' 
         : 'bg-black/20 backdrop-blur-lg border border-white/10 shadow-xl shadow-purple-500/5'
