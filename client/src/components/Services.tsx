@@ -41,9 +41,9 @@ const Services = () => {
       <div className="max-w-7xl mx-auto" ref={ref}>
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            My <span className="text-blue-400">Services</span>
+            My <span className="cyber-gradient-text">Services</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-300 mx-auto rounded-full mb-8"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 via-pink-500 to-purple-500 mx-auto rounded-full mb-8 cyber-glow-pink"></div>
           <p className="text-white/70 text-lg max-w-2xl mx-auto">
             Professional video editing services tailored to your content needs and brand goals
           </p>
@@ -55,17 +55,17 @@ const Services = () => {
             return (
               <div
                 key={service.title}
-                className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 md:p-8 hover:bg-white/10 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:scale-105 hover:border-white/20"
+                className="group bg-white/5 backdrop-blur-xl border border-pink-500/20 rounded-3xl p-6 md:p-8 hover:bg-white/10 hover:shadow-2xl hover:shadow-pink-500/20 transition-all duration-500 hover:scale-105 hover:border-pink-400/40 cyber-glow-pink neon-border"
               >
                 <div className="flex items-start gap-6">
-                  <div className="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-blue-500/30 transition-colors">
-                    <IconComponent className="text-blue-400" size={28} />
+                  <div className="w-16 h-16 bg-pink-500/20 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-pink-500/30 transition-colors cyber-glow-pink">
+                    <IconComponent className="text-pink-400" size={28} />
                   </div>
                   
                   <div className="flex-1">
                     <div className="flex items-center justify-between mb-4">
                       <h3 className="text-xl font-semibold text-white">{service.title}</h3>
-                      <span className="text-blue-400 font-semibold text-sm">{service.price}</span>
+                      <span className="text-pink-400 font-semibold text-sm">{service.price}</span>
                     </div>
                     
                     <p className="text-white/70 mb-6 leading-relaxed">

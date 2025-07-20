@@ -12,24 +12,25 @@ const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-black to-blue-950/30"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-black to-purple-950/30"></div>
       
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-pulse cyber-glow-blue"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-600/5 rounded-full blur-3xl animate-pulse delay-1000 cyber-glow-pink"></div>
+        <div className="absolute top-1/2 right-1/3 w-48 h-48 bg-purple-500/8 rounded-full blur-2xl animate-pulse delay-500 cyber-glow-purple"></div>
       </div>
 
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
         {/* Main Title */}
-        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-          <span className="bg-gradient-to-r from-white via-blue-100 to-blue-200 bg-clip-text text-transparent">
+        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight float-animation">
+          <span className="cyber-gradient-text">
             Vishal Edits
           </span>
         </h1>
 
         {/* Subtitle */}
-        <p className="text-xl sm:text-2xl text-blue-200 mb-4 font-medium">
+        <p className="text-xl sm:text-2xl text-cyan-300 mb-4 font-medium">
           🎬 Video Editor | Short & Long Form Specialist
         </p>
 
@@ -44,7 +45,7 @@ const Hero = () => {
             href="https://instagram.com/vishaledits25" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="group bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:bg-white/20 hover:scale-105 flex items-center gap-3"
+            className="group bg-cyan-500/10 backdrop-blur-md border border-cyan-400/30 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:bg-cyan-500/20 hover:scale-105 flex items-center gap-3 cyber-glow-blue neon-border"
           >
             <Play size={20} className="group-hover:scale-110 transition-transform" />
             Watch Reel
@@ -52,7 +53,7 @@ const Hero = () => {
           
           <button 
             onClick={scrollToContact}
-            className="group bg-blue-600/80 backdrop-blur-md border border-blue-500/30 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:bg-blue-600 hover:scale-105 flex items-center gap-3"
+            className="group bg-pink-600/80 backdrop-blur-md border border-pink-500/30 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:bg-pink-600 hover:scale-105 flex items-center gap-3 cyber-glow-pink"
           >
             <MessageCircle size={20} className="group-hover:scale-110 transition-transform" />
             Contact Me

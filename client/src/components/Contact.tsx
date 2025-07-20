@@ -33,9 +33,9 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto" ref={ref}>
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            Let's <span className="text-blue-400">Connect</span>
+            Let's <span className="cyber-gradient-text">Connect</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-300 mx-auto rounded-full mb-8"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 via-pink-500 to-purple-500 mx-auto rounded-full mb-8 cyber-glow-purple"></div>
           <p className="text-white/70 text-lg max-w-2xl mx-auto">
             Ready to bring your vision to life? Let's discuss your project and create something amazing together.
           </p>
@@ -43,7 +43,7 @@ const Contact = () => {
 
         <div className={`grid lg:grid-cols-2 gap-8 lg:gap-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           {/* Contact Form */}
-          <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 md:p-8 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:border-white/20">
+          <div className="bg-white/5 backdrop-blur-xl border border-purple-500/20 rounded-3xl p-6 md:p-8 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-500 hover:border-purple-400/40 cyber-glow-purple neon-border">
             <h3 className="text-2xl font-semibold text-white mb-6">Send Me a Message</h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -97,7 +97,7 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center gap-3"
+                className="w-full bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center gap-3 cyber-glow-purple neon-border"
               >
                 <Send size={20} />
                 Send Message
@@ -113,8 +113,8 @@ const Contact = () => {
               
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-blue-500/20 rounded-2xl flex items-center justify-center">
-                    <Clock className="text-blue-400" size={20} />
+                  <div className="w-12 h-12 bg-cyan-500/20 rounded-2xl flex items-center justify-center cyber-glow-blue">
+                    <Clock className="text-cyan-400" size={20} />
                   </div>
                   <div>
                     <h4 className="text-white font-medium">Response Time</h4>
@@ -123,8 +123,8 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-blue-500/20 rounded-2xl flex items-center justify-center">
-                    <MapPin className="text-blue-400" size={20} />
+                  <div className="w-12 h-12 bg-cyan-500/20 rounded-2xl flex items-center justify-center cyber-glow-blue">
+                    <MapPin className="text-cyan-400" size={20} />
                   </div>
                   <div>
                     <h4 className="text-white font-medium">Location</h4>
