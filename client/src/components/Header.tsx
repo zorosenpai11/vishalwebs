@@ -22,13 +22,13 @@ const Header = () => {
   };
 
   return (
-    <header className={`fixed top-2 md:top-4 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-500 w-auto max-w-xs md:max-w-lg mx-4 ${
+    <header className={`fixed top-2 md:top-4 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-500 w-fit ${
       isScrolled 
         ? 'bg-black/30 backdrop-blur-xl border border-white/20 shadow-2xl shadow-purple-500/10' 
         : 'bg-black/20 backdrop-blur-lg border border-white/10 shadow-xl shadow-purple-500/5'
     } rounded-full animate-on-load animate-smoke-fade animate-delay-400`}>
-      <div className="px-4 md:px-8 py-2">
-        <div className="flex items-center h-12 gap-8">
+      <div className="px-6 md:px-8 py-2">
+        <div className="flex items-center h-12 gap-6">
           {/* Vishal Logo */}
           <div className="text-xl text-white font-extrabold cursor-pointer transition-all duration-300 hover:scale-110 hover:text-purple-400 hover:drop-shadow-[0_0_10px_rgba(168,85,247,0.5)] active:scale-95" style={{ fontFamily: 'Orbitron, Inter, sans-serif' }}>
             Vishal
