@@ -1,5 +1,6 @@
 
 import { Play, MessageCircle } from 'lucide-react';
+import heroVideo from '@assets/953d6b22c46147f9e0eaa3bfbdf0f70d_1753000928013.mp4';
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -11,17 +12,28 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-black to-purple-950/30"></div>
+      {/* Video Background */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      >
+        <source src={heroVideo} type="video/mp4" />
+      </video>
       
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0">
+      {/* Dark Overlay for Better Text Readability */}
+      <div className="absolute inset-0 bg-black/60 z-10"></div>
+      
+      {/* Cyberpunk Glow Effects on Top of Video */}
+      <div className="absolute inset-0 z-20">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-pulse cyber-glow-blue"></div>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-600/5 rounded-full blur-3xl animate-pulse delay-1000 cyber-glow-pink"></div>
         <div className="absolute top-1/2 right-1/3 w-48 h-48 bg-purple-500/8 rounded-full blur-2xl animate-pulse delay-500 cyber-glow-purple"></div>
       </div>
 
-      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+      <div className="relative z-30 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
         {/* Main Title */}
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight float-animation">
           <span className="cyber-gradient-text">
@@ -45,7 +57,7 @@ const Hero = () => {
             href="https://instagram.com/vishaledits25" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="group bg-cyan-500/10 backdrop-blur-md border border-cyan-400/30 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:bg-cyan-500/20 hover:scale-105 flex items-center gap-3 cyber-glow-blue neon-border"
+            className="group bg-cyan-500/10 backdrop-blur-md border border-cyan-400/30 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-cyan-500/20 hover:scale-105 flex items-center justify-center gap-3 cyber-glow-blue neon-border"
           >
             <Play size={20} className="group-hover:scale-110 transition-transform" />
             Watch Reel
@@ -53,7 +65,7 @@ const Hero = () => {
           
           <button 
             onClick={scrollToContact}
-            className="group bg-pink-600/80 backdrop-blur-md border border-pink-500/30 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:bg-pink-600 hover:scale-105 flex items-center gap-3 cyber-glow-pink"
+            className="group bg-pink-600/80 backdrop-blur-md border border-pink-500/30 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-pink-600 hover:scale-105 flex items-center justify-center gap-3 cyber-glow-pink"
           >
             <MessageCircle size={20} className="group-hover:scale-110 transition-transform" />
             Contact Me
