@@ -1,6 +1,7 @@
 
 import { Video, Youtube, Megaphone, Mic, ArrowRight } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import servicesVideo from '@assets/0c57743b821c57c284a5e37bfbb4bbde_1753001496840.mp4';
 
 const Services = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -37,8 +38,20 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto" ref={ref}>
+    <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      {/* Video Background */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover opacity-10 z-0"
+      >
+        <source src={servicesVideo} type="video/mp4" />
+      </video>
+      <div className="absolute inset-0 bg-black/70 z-10"></div>
+      
+      <div className="max-w-7xl mx-auto relative z-20" ref={ref}>
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
             My <span className="cyber-gradient-text">Services</span>
