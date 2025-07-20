@@ -1,6 +1,6 @@
 
 import { Play, MessageCircle } from 'lucide-react';
-import heroVideo from '@assets/953d6b22c46147f9e0eaa3bfbdf0f70d_1753000928013.mp4';
+import heroBg from '@assets/image_1753001101501.png';
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -12,19 +12,14 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Video Background */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover z-0"
-      >
-        <source src={heroVideo} type="video/mp4" />
-      </video>
+      {/* Image Background */}
+      <div 
+        className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat z-0"
+        style={{ backgroundImage: `url(${heroBg})` }}
+      ></div>
       
       {/* Dark Overlay for Better Text Readability */}
-      <div className="absolute inset-0 bg-black/60 z-10"></div>
+      <div className="absolute inset-0 bg-black/50 z-10"></div>
       
       {/* Cyberpunk Glow Effects on Top of Video */}
       <div className="absolute inset-0 z-20">
@@ -57,7 +52,7 @@ const Hero = () => {
             href="https://instagram.com/vishaledits25" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="group bg-cyan-500/10 backdrop-blur-md border border-cyan-400/30 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-cyan-500/20 hover:scale-105 flex items-center justify-center gap-3 cyber-glow-blue neon-border"
+            className="group bg-cyan-500/10 backdrop-blur-md text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-cyan-500/20 hover:scale-105 flex items-center justify-center gap-3"
           >
             <Play size={20} className="group-hover:scale-110 transition-transform" />
             Watch Reel
@@ -65,7 +60,7 @@ const Hero = () => {
           
           <button 
             onClick={scrollToContact}
-            className="group bg-pink-600/80 backdrop-blur-md border border-pink-500/30 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-pink-600 hover:scale-105 flex items-center justify-center gap-3 cyber-glow-pink"
+            className="group bg-pink-600/80 backdrop-blur-md text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-pink-600 hover:scale-105 flex items-center justify-center gap-3"
           >
             <MessageCircle size={20} className="group-hover:scale-110 transition-transform" />
             Contact Me

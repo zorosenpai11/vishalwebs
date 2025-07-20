@@ -43,7 +43,7 @@ const Contact = () => {
 
         <div className={`grid lg:grid-cols-2 gap-8 lg:gap-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           {/* Contact Form */}
-          <div className="bg-white/5 backdrop-blur-xl border border-purple-500/20 rounded-3xl p-6 md:p-8 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-500 hover:border-purple-400/40 cyber-glow-purple neon-border">
+          <div className="bg-white/5 backdrop-blur-xl rounded-3xl p-6 md:p-8 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-500">
             <h3 className="text-2xl font-semibold text-white mb-6">Send Me a Message</h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -97,7 +97,7 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="w-full bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center gap-3 cyber-glow-purple neon-border"
+                className="w-full bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center gap-3"
               >
                 <Send size={20} />
                 Send Message
@@ -108,12 +108,12 @@ const Contact = () => {
           {/* Contact Info */}
           <div className="space-y-8">
             {/* Quick Info */}
-            <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 md:p-8 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:border-white/20">
+            <div className="bg-white/5 backdrop-blur-xl rounded-3xl p-6 md:p-8 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-500">
               <h3 className="text-2xl font-semibold text-white mb-6">Get In Touch</h3>
               
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-cyan-500/20 rounded-2xl flex items-center justify-center cyber-glow-blue">
+                  <div className="w-12 h-12 bg-cyan-500/20 rounded-2xl flex items-center justify-center">
                     <Clock className="text-cyan-400" size={20} />
                   </div>
                   <div>
@@ -123,7 +123,7 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-cyan-500/20 rounded-2xl flex items-center justify-center cyber-glow-blue">
+                  <div className="w-12 h-12 bg-cyan-500/20 rounded-2xl flex items-center justify-center">
                     <MapPin className="text-cyan-400" size={20} />
                   </div>
                   <div>
@@ -135,7 +135,7 @@ const Contact = () => {
             </div>
 
             {/* Social Links */}
-            <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 md:p-8 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:border-white/20">
+            <div className="bg-white/5 backdrop-blur-xl rounded-3xl p-6 md:p-8 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-500">
               <h3 className="text-2xl font-semibold text-white mb-6">Follow My Work</h3>
               
               <div className="space-y-4">
@@ -143,7 +143,7 @@ const Contact = () => {
                   href="https://instagram.com/vishaledits25"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 hover:shadow-2xl hover:shadow-pink-500/20 transition-all duration-300 group hover:border-pink-500/30"
+                  className="flex items-center gap-4 p-4 bg-white/5 rounded-2xl hover:bg-white/10 hover:shadow-2xl hover:shadow-pink-500/20 transition-all duration-300 group"
                 >
                   <div className="w-12 h-12 bg-pink-500/20 rounded-2xl flex items-center justify-center">
                     <Instagram className="text-pink-400" size={20} />
@@ -159,7 +159,7 @@ const Contact = () => {
                   href="https://youtube.com/@vishaleditss25"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 hover:shadow-2xl hover:shadow-red-500/20 transition-all duration-300 group hover:border-red-500/30"
+                  className="flex items-center gap-4 p-4 bg-white/5 rounded-2xl hover:bg-white/10 hover:shadow-2xl hover:shadow-red-500/20 transition-all duration-300 group"
                 >
                   <div className="w-12 h-12 bg-red-500/20 rounded-2xl flex items-center justify-center">
                     <Youtube className="text-red-400" size={20} />

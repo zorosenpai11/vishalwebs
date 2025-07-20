@@ -55,10 +55,10 @@ const Services = () => {
             return (
               <div
                 key={service.title}
-                className="group bg-white/5 backdrop-blur-xl border border-pink-500/20 rounded-3xl p-6 md:p-8 hover:bg-white/10 hover:shadow-2xl hover:shadow-pink-500/20 transition-all duration-500 hover:scale-105 hover:border-pink-400/40 cyber-glow-pink neon-border"
+                className="group bg-white/5 backdrop-blur-xl rounded-3xl p-6 md:p-8 hover:bg-white/10 hover:shadow-2xl hover:shadow-pink-500/20 transition-all duration-500 hover:scale-105"
               >
                 <div className="flex items-start gap-6">
-                  <div className="w-16 h-16 bg-pink-500/20 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-pink-500/30 transition-colors cyber-glow-pink">
+                  <div className="w-16 h-16 bg-pink-500/20 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-pink-500/30 transition-colors">
                     <IconComponent className="text-pink-400" size={28} />
                   </div>
                   
