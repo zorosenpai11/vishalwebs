@@ -1,6 +1,6 @@
 
 import { Play, MessageCircle } from 'lucide-react';
-import heroVideo from '@assets/953d6b22c46147f9e0eaa3bfbdf0f70d_1753000928013.mp4';
+import heroImage from '@assets/image_1753002189465.png';
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -12,37 +12,32 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Video Background */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover z-0"
-      >
-        <source src={heroVideo} type="video/mp4" />
-      </video>
+      {/* Hero Background Image */}
+      <div 
+        className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat z-0"
+        style={{ backgroundImage: `url(${heroImage})` }}
+      ></div>
       
       {/* Dark Overlay for Better Text Readability */}
-      <div className="absolute inset-0 bg-black/60 z-10"></div>
+      <div className="absolute inset-0 bg-black/50 z-10"></div>
       
-      {/* Cyberpunk Glow Effects on Top of Video */}
+      {/* Cyberpunk Glow Effects on Top of Image */}
       <div className="absolute inset-0 z-20">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-pulse cyber-glow-blue"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-600/5 rounded-full blur-3xl animate-pulse delay-1000 cyber-glow-pink"></div>
-        <div className="absolute top-1/2 right-1/3 w-48 h-48 bg-purple-500/8 rounded-full blur-2xl animate-pulse delay-500 cyber-glow-purple"></div>
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-500/15 rounded-full blur-3xl animate-pulse cyber-glow-purple"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl animate-pulse delay-1000 cyber-glow-purple"></div>
+        <div className="absolute top-1/2 right-1/3 w-48 h-48 bg-purple-400/12 rounded-full blur-2xl animate-pulse delay-500 cyber-glow-purple"></div>
       </div>
 
       <div className="relative z-30 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
         {/* Main Title */}
-        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight float-animation animate-on-load animate-fade-in-scale">
+        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight float-animation animate-on-load animate-fade-in-scale" style={{ fontFamily: 'Orbitron, Inter, sans-serif' }}>
           <span className="cyber-gradient-text">
             Vishal Edits
           </span>
         </h1>
 
         {/* Subtitle */}
-        <p className="text-xl sm:text-2xl text-cyan-300 mb-4 font-medium animate-on-load animate-fade-in-up animate-delay-200">
+        <p className="text-xl sm:text-2xl text-purple-300 mb-4 font-medium animate-on-load animate-fade-in-up animate-delay-200" style={{ fontFamily: 'Orbitron, Inter, sans-serif' }}>
           🎬 Video Editor | Short & Long Form Specialist
         </p>
 
@@ -57,7 +52,7 @@ const Hero = () => {
             href="https://instagram.com/vishaledits25" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="group bg-cyan-500/10 backdrop-blur-md text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-cyan-500/20 hover:scale-105 flex items-center justify-center gap-3"
+            className="group bg-purple-500/10 backdrop-blur-md text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-purple-500/20 hover:scale-105 flex items-center justify-center gap-3 hover:shadow-lg hover:shadow-purple-500/20"
           >
             <Play size={20} className="group-hover:scale-110 transition-transform" />
             Watch Reel
@@ -65,7 +60,7 @@ const Hero = () => {
           
           <button 
             onClick={scrollToContact}
-            className="group bg-pink-600/80 backdrop-blur-md text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-pink-600 hover:scale-105 flex items-center justify-center gap-3"
+            className="group bg-purple-600/80 backdrop-blur-md text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-purple-600 hover:scale-105 flex items-center justify-center gap-3 hover:shadow-lg hover:shadow-purple-600/20"
           >
             <MessageCircle size={20} className="group-hover:scale-110 transition-transform" />
             Contact Me

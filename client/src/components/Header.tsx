@@ -22,14 +22,14 @@ const Header = () => {
   };
 
   return (
-    <header className={`fixed top-2 md:top-4 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 w-auto max-w-xs md:max-w-md mx-4 ${
+    <header className={`fixed top-2 md:top-4 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 w-auto max-w-sm md:max-w-lg mx-4 ${
       isScrolled 
         ? 'bg-black/20 backdrop-blur-xl border border-white/10' 
         : 'bg-black/10 backdrop-blur-md border border-white/5'
     } rounded-full animate-on-load animate-fade-in-scale animate-delay-200`}>
       <div className="px-4 md:px-6 py-2">
         <div className="flex items-center justify-between h-12">
-          <div className="text-xl text-white font-extrabold mr-8 cursor-pointer transition-all duration-300 hover:scale-110 hover:text-cyan-400 hover:drop-shadow-[0_0_10px_rgba(0,255,255,0.5)] active:scale-95">
+          <div className="text-xl text-white font-extrabold mr-4 cursor-pointer transition-all duration-300 hover:scale-110 hover:text-purple-400 hover:drop-shadow-[0_0_10px_rgba(168,85,247,0.5)] active:scale-95" style={{ fontFamily: 'Orbitron, Inter, sans-serif' }}>
             Vishal
           </div>
           
@@ -39,7 +39,7 @@ const Header = () => {
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
-                className="text-white/80 hover:text-white transition-all duration-300 text-sm font-medium px-3 py-2 rounded-full hover:bg-white/10 hover:shadow-lg hover:shadow-cyan-400/20 hover:scale-105 active:scale-95 whitespace-nowrap"
+                className="text-white/80 hover:text-white transition-all duration-300 text-sm font-medium px-3 py-2 rounded-full hover:bg-white/10 hover:shadow-lg hover:shadow-purple-400/20 hover:scale-105 active:scale-95 whitespace-nowrap"
               >
                 {item}
               </button>
@@ -63,7 +63,7 @@ const Header = () => {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className="block w-full text-left text-white/80 hover:text-white transition-all duration-300 py-2 px-3 rounded-lg hover:bg-white/10 hover:shadow-lg hover:shadow-cyan-400/20 hover:scale-105 active:scale-95"
+                  className="block w-full text-left text-white/80 hover:text-white transition-all duration-300 py-2 px-3 rounded-lg hover:bg-white/10 hover:shadow-lg hover:shadow-purple-400/20 hover:scale-105 active:scale-95"
                 >
                   {item}
                 </button>

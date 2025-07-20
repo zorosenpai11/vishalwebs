@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -115,7 +116,7 @@
 
 /* Animated gradient text */
 .cyber-gradient-text {
-  background: linear-gradient(45deg, #00ffff, #ff00ff, #8a2be2);
+  background: linear-gradient(45deg, #8b5cf6, #a855f7, #c084fc, #d8b4fe);
   background-size: 200% 200%;
   background-clip: text;
   -webkit-background-clip: text;
