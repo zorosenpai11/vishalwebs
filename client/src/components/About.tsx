@@ -1,6 +1,7 @@
 
 import { User, Award, Zap } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import aboutBg from '@assets/image_1753001101501.png';
 
 const About = () => {
   const tools = [
@@ -13,8 +14,15 @@ const About = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto" ref={ref}>
+    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat opacity-10 z-0"
+        style={{ backgroundImage: `url(${aboutBg})` }}
+      ></div>
+      <div className="absolute inset-0 bg-black/60 z-10"></div>
+      
+      <div className="max-w-6xl mx-auto relative z-20" ref={ref}>
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
             About <span className="cyber-gradient-text">Me</span>

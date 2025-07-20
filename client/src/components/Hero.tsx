@@ -1,6 +1,6 @@
 
 import { Play, MessageCircle } from 'lucide-react';
-import heroBg from '@assets/image_1753001101501.png';
+import heroVideo from '@assets/953d6b22c46147f9e0eaa3bfbdf0f70d_1753000928013.mp4';
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -12,14 +12,19 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Image Background */}
-      <div 
-        className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat z-0"
-        style={{ backgroundImage: `url(${heroBg})` }}
-      ></div>
+      {/* Video Background */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      >
+        <source src={heroVideo} type="video/mp4" />
+      </video>
       
       {/* Dark Overlay for Better Text Readability */}
-      <div className="absolute inset-0 bg-black/50 z-10"></div>
+      <div className="absolute inset-0 bg-black/60 z-10"></div>
       
       {/* Cyberpunk Glow Effects on Top of Video */}
       <div className="absolute inset-0 z-20">
