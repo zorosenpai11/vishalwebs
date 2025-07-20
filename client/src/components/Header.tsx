@@ -29,9 +29,7 @@ const Header = () => {
     } rounded-full`}>
       <div className="px-4 md:px-6 py-2">
         <div className="flex items-center justify-between h-12">
-          <div className="text-xl font-bold text-white">
-            Vishal Edits
-          </div>
+          <div className="text-xl text-white font-extrabold">Vishal                             </div>
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-6">
