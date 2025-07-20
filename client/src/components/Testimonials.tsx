@@ -1,7 +1,11 @@
 
 import { Star, Quote } from 'lucide-react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import testimonialsVideo from '@assets/0c57743b821c57c284a5e37bfbb4bbde_1753001496840.mp4';
 
 const Testimonials = () => {
+  const { ref, isVisible } = useScrollAnimation();
+  
   const testimonials = [
     {
       name: 'Sarah Johnson',
@@ -54,8 +58,20 @@ const Testimonials = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <section id="testimonials" className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      {/* Video Background */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover opacity-10 z-0"
+      >
+        <source src={testimonialsVideo} type="video/mp4" />
+      </video>
+      <div className="absolute inset-0 bg-black/70 z-10"></div>
+      
+      <div className="max-w-7xl mx-auto relative z-20" ref={ref}>
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
             Client <span className="text-blue-400">Testimonials</span>
@@ -66,7 +82,7 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.name}

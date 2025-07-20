@@ -29,7 +29,9 @@ const Header = () => {
     } rounded-full`}>
       <div className="px-4 md:px-6 py-2">
         <div className="flex items-center justify-between h-12">
-          <div className="text-xl text-white font-extrabold mr-8">Vishal</div>
+          <div className="text-xl text-white font-extrabold mr-8 cursor-pointer transition-all duration-300 hover:scale-110 hover:text-cyan-400 hover:drop-shadow-[0_0_10px_rgba(0,255,255,0.5)] active:scale-95">
+            Vishal
+          </div>
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-6">
@@ -37,7 +39,7 @@ const Header = () => {
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
-                className="text-white/80 hover:text-white transition-colors duration-200 text-sm font-medium"
+                className="text-white/80 hover:text-white transition-all duration-300 text-sm font-medium px-3 py-2 rounded-full hover:bg-white/10 hover:shadow-lg hover:shadow-cyan-400/20 hover:scale-105 active:scale-95"
               >
                 {item}
               </button>
@@ -61,7 +63,7 @@ const Header = () => {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className="block w-full text-left text-white/80 hover:text-white transition-colors duration-200 py-2"
+                  className="block w-full text-left text-white/80 hover:text-white transition-all duration-300 py-2 px-3 rounded-lg hover:bg-white/10 hover:shadow-lg hover:shadow-cyan-400/20 hover:scale-105 active:scale-95"
                 >
                   {item}
                 </button>
