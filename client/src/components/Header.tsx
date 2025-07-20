@@ -22,20 +22,20 @@ const Header = () => {
   };
 
   return (
-    <header className={`fixed top-2 md:top-4 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 w-auto max-w-sm md:max-w-2xl mx-4 ${
+    <header className={`fixed top-2 md:top-4 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-500 w-auto max-w-xs md:max-w-lg mx-4 ${
       isScrolled 
-        ? 'bg-black/20 backdrop-blur-xl border border-white/10' 
-        : 'bg-black/10 backdrop-blur-md border border-white/5'
+        ? 'bg-black/30 backdrop-blur-xl border border-white/20 shadow-2xl shadow-purple-500/10' 
+        : 'bg-black/20 backdrop-blur-lg border border-white/10 shadow-xl shadow-purple-500/5'
     } rounded-full animate-on-load animate-smoke-fade animate-delay-400`}>
       <div className="px-4 md:px-8 py-2">
-        <div className="flex items-center justify-between h-12 relative">
-          {/* Vishal Logo - Positioned to Left */}
+        <div className="flex items-center h-12 gap-8">
+          {/* Vishal Logo */}
           <div className="text-xl text-white font-extrabold cursor-pointer transition-all duration-300 hover:scale-110 hover:text-purple-400 hover:drop-shadow-[0_0_10px_rgba(168,85,247,0.5)] active:scale-95" style={{ fontFamily: 'Orbitron, Inter, sans-serif' }}>
             Vishal
           </div>
           
-          {/* Desktop Navigation - Centered */}
-          <nav className="hidden md:flex space-x-2 absolute left-1/2 transform -translate-x-1/2">
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex space-x-2">
             {['Home', 'About', 'Services', 'Contact'].map((item) => (
               <button
                 key={item}
@@ -50,7 +50,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-white p-2"
+            className="md:hidden text-white p-2 ml-auto"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
